@@ -1,0 +1,32 @@
+---
+-
+  name: copy new index.html
+  hosts: all
+  tasks:
+    -
+      name: install httpd
+      yum:
+        name: httpd
+    -
+      name: copy index.html
+      copy:
+        src: /tmp/index.html
+        dest: /var/www/html/index.html
+      notify:
+        -
+          restart_web
+          firewall_web
+  handlers:
+    -
+      name: restart_web
+      service:
+        name: httpd
+        state: restarted
+        enabled: true
+    -
+      name: firewall_web
+      firewalld:
+        service: http
+        state: enabled
+        permanent: true
+...

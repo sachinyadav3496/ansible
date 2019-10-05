@@ -1,0 +1,9 @@
+[all]
+client.example.com
+server.example.com
+
+[lamp]
+client.example.com
+
+[file]
+server.example.com

@@ -1,0 +1,6 @@
+---
+  -
+    name: install tree
+    yum:
+      name: tree
+...

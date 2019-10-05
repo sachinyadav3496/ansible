@@ -1,0 +1,12 @@
+---
+  -
+    hosts: all
+    tasks:
+      -
+        name: Print some Ansible facts
+        debug:
+          msg: >
+            The IPv4 address of {{ ansible_fqdn }} is set to {{ ansible_default_ipv4.address }}
+            it runs {{ ansible_kernel }} and had the following network interfaces:
+               {{ ansible_interfaces }}
+...

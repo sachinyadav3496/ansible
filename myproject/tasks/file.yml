@@ -1,0 +1,21 @@
+---
+  -
+    name: install and start file services
+    yum:
+      name:
+        - samba
+        - vsftpd
+      state: latest
+  -
+    name: start samba services
+    service:
+      name: samba
+      state: started
+      enabled: true
+  -
+    name: start the ftp services
+    service:
+      name: vsftpd
+      state: started
+      enabled: true
+...

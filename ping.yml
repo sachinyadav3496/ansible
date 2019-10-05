@@ -1,0 +1,12 @@
+---
+ - 
+   name: my name is ping
+   vars_files: variable.txt
+   hosts: "{{ hosts }}"
+   tasks:
+        - 
+          name: checking variable files 
+          yum : 
+                name: elinks
+...
+        

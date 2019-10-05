@@ -1,0 +1,5 @@
+[lamp]
+server.example.com
+
+[file]
+client.example.com 

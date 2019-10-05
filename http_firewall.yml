@@ -1,0 +1,10 @@
+---
+- name: firewall management
+  hosts: all
+  tasks:
+        - name : firewall service add
+          firewalld:
+                service: http
+                state: enabled
+                permanent: true
+...

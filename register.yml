@@ -1,0 +1,13 @@
+---
+  -
+    name: show register
+    hosts: client.example.com
+    tasks:
+      -
+        name: get output of id command
+        command: id -un
+        register: loggedin
+      -
+        debug:
+          var: loggedin
+...
